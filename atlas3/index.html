@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>寰宇拾景</title>
+  <link rel="stylesheet" href="vendor/leaflet.css" />
+  <link rel="stylesheet" href="vendor/MarkerCluster.css" />
+  <link rel="stylesheet" href="vendor/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">地</span>
+      <div>
+        <h1>寰宇拾景</h1>
+        <p>点开一座城，看它的光</p>
+      </div>
+    </div>
+    <form class="search" id="search-form" role="search">
+      <input id="search" type="search" placeholder="搜索城市、国家或大洲" autocomplete="off" />
+    </form>
+    <div class="top-actions">
+      <span class="count" id="count"></span>
+      <button type="button" class="ghost phone-only" id="list-toggle">列表</button>
+      <button type="button" class="ghost" id="random-btn">随机一处</button>
+    </div>
+  </header>
+
+  <div class="filters" id="filters" role="tablist"></div>
+
+  <main class="stage">
+    <aside class="list-panel">
+      <div class="list" id="list" role="listbox" aria-label="地点列表"></div>
+    </aside>
+    <div id="map"></div>
+    <aside class="detail" id="detail" hidden>
+      <button type="button" class="close" id="close-detail" aria-label="关闭">×</button>
+      <div class="hero" id="hero"></div>
+      <div class="thumbs" id="thumbs"></div>
+      <div class="detail-body">
+        <p class="eyebrow" id="detail-meta"></p>
+        <h2 id="detail-title"></h2>
+        <p class="blurb" id="detail-blurb"></p>
+        <p class="extract" id="detail-extract">正在读取介绍…</p>
+        <p class="coords" id="detail-coords"></p>
+        <a class="wiki-link" id="detail-link" target="_blank" rel="noopener">在维基百科继续看</a>
+      </div>
+    </aside>
+  </main>
+
+  <script src="vendor/leaflet.js"></script>
+  <script src="vendor/leaflet.markercluster.js"></script>
+  <script src="js/places.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
